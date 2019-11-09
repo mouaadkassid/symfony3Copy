@@ -1,0 +1,3 @@
+hassan_homepage:
+    path:     /
+    defaults: { _controller: HassanBundle:Default:index }

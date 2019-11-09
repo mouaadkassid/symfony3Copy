@@ -1,0 +1,3 @@
+somaya_homepage:
+    path:     /
+    defaults: { _controller: SomayaBundle:Default:index }

@@ -1,0 +1,25 @@
+{# {% extends "@Blog/base.html.twig" %} #}
+{% extends "base.html.twig" %}
+
+{% block title %} Posts {% endblock %}
+
+{% block content %}
+{{ parent() }}
+<div class="container">
+	<div class="row">
+		<div class="col-md-12">
+			<ul class="list-group">
+			{% for index,data in datas %}
+				<li class="list-group-item {% if loop.last %} active{% endif %}">
+				<h1>{{ data.titre|title }} numero : {{ loop.index0 }}</h1>
+				<h2> {{ data.date|date('F j Y') }} </h2>
+				<p>{{ data.post }}</p>
+				<span class="badge badge-primary">{{ data.post|length }}</span>
+				<hr>
+				</li>
+			{% endfor %}
+			</ul>
+		</div>
+	</div>
+</div>
+{% endblock %}

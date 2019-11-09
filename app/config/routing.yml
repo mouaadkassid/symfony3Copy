@@ -1,0 +1,76 @@
+stock:
+    resource: "@StockBundle/Resources/config/routing.yml"
+    prefix:   /
+
+annot:
+    resource: "@AnnotBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+somaya:
+    resource: "@SomayaBundle/Resources/config/routing.yml"
+    prefix:   /somaya
+
+hassan:
+    resource: "@HassanBundle/Resources/config/routing.yml"
+    prefix:   /
+
+blog:
+    resource: "@BlogBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+test:
+    resource: "@TestBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+site:
+    resource: "@SiteBundle/Resources/config/routing.yml"
+    prefix:   /site
+
+mouad:
+    resource: "@MouadBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+app:
+    resource: '@AppBundle/Controller/'
+    type: annotation
+
+site_salam:
+    path:     /index
+    defaults: { _controller: SiteBundle:Public:index }
+
+saad:
+    path: /Aladin
+    defaults: { _controller: SaadBundle:Aladin:index }
+
+sineb_route:
+    path: /Zineb
+    defaults: { _controller: SomayaBundle:Zineb:index }
+
+Annot_route:
+    path: /Annot
+    defaults: { _controller: AnnotBundle:Annot:index }
+
+blog_path:
+    path: /Blog
+    defaults: { _controller: BlogBundle:Blog:index }
+
+
+blog_show:
+    path: /Blog/{id}/{anne}/{titre}.{ext}
+    defaults: { _controller: BlogBundle:Blog:show }
+    requirements: 
+        id: '\d+'
+        anne: '\d{4}'
+        titre: '[a-zA-Z]+'
+        ext: 'php|html'
+        
+
+# site_acceuil:
+#     path: /acceuil
+#     defaults: { _controller: BlogBundle:Site:acceuil }
+
+
